@@ -1,19 +1,19 @@
-import { Button, Heading, Stack, Text } from "@chakra-ui/react"
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+// komponen
+import Landing from './pages/Landing';
 
 
 function App() {
   return (
-    <Stack spacing={4} bg="white" p={8} borderRadius="lg">
-      <Heading as="h1" size="md" color="primary.900">
-        Chakra UI is rad!
-      </Heading>
-      <Text as="p" fontSize="md" color="primary.500">
-        Here are your first Chakra components:
-      </Text>
-      <Button colorScheme="primary" isFullWidth>
-        Click me, please!
-      </Button>
-    </Stack>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Landing />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
